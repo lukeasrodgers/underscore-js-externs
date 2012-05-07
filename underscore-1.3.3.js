@@ -15,7 +15,7 @@
  */
 
 /**
- * @fileoverview Externs for Underscore 1.3.1
+ * @fileoverview Externs for Underscore 1.3.3
  *
  * TODO: Wrapper objects.
  * TODO: _.bind - for some reason this plays up in practice.
@@ -34,20 +34,24 @@ function _(obj) {};
 // Collection functions
 
 /**
+ * Object-style annotation
  * @param {Object|Array} obj
  * @param {Function} iterator
  * @param {Object=} opt_context
  */
 _.each = function(obj, iterator, opt_context) {};
+_.forEach = _.each;
 
 /**
- * @param {Object|Array} obj
+ * Functional-style annotation
  * @param {Function} iterator
  * @param {Object=} opt_context
  */
-_.forEach = function(obj, iterator, opt_context) {};
+_.prototype.each = function(iterator, opt_context){};
+_.prototype.forEach = _.prototype.each;
 
 /**
+ * Object-style annotation
  * @param {Object|Array} obj
  * @param {Function} iterator
  * @param {Object=} opt_context
@@ -56,6 +60,15 @@ _.forEach = function(obj, iterator, opt_context) {};
 _.map = function(obj, iterator, opt_context) {};
 
 /**
+ * Functional-style annotation
+ * @param {Function} iterator
+ * @param {Object=} opt_context
+ * @return {!Array}
+ */
+_.prototype.map = function(iterator, opt_context){};
+
+/**
+ * Object-style notation
  * @param {Object|Array} obj
  * @param {Function} iterator
  * @param {Object=} opt_context
@@ -64,6 +77,15 @@ _.map = function(obj, iterator, opt_context) {};
 _.collect = function(obj, iterator, opt_context) {};
 
 /**
+ * Functional-style notation
+ * @param {Function} iterator
+ * @param {Object=} opt_context
+ * @return {!Array}
+ */
+_.prototype.collect = function(iterator, opt_context) {};
+
+/**
+ * Object-style notation
  * @param {Object|Array} obj
  * @param {Function} iterator
  * @param {*} memo
@@ -71,26 +93,22 @@ _.collect = function(obj, iterator, opt_context) {};
  * @return {!*}
  */
 _.reduce = function(obj, iterator, memo, opt_context) {};
+_.foldl = _.reduce;
+_.inject = _.reduce;
 
 /**
- * @param {Object|Array} obj
+ * Functional-style notation
  * @param {Function} iterator
  * @param {*} memo
  * @param {Object=} opt_context
  * @return {!*}
  */
-_.inject = function(obj, iterator, memo, opt_context) {};
+_.prototype.reduce = function(iterator, memo, opt_context) {};
+_.foldl = _.prototype.reduce;
+_.inject = _.prototype.reduce;
 
 /**
- * @param {Object|Array} obj
- * @param {Function} iterator
- * @param {*} memo
- * @param {Object=} opt_context
- * @return {!*}
- */
-_.foldl = function(obj, iterator, memo, opt_context) {};
-
-/**
+ * Object-style notation
  * @param {Object|Array} obj
  * @param {Function} iterator
  * @param {*} memo
@@ -98,15 +116,18 @@ _.foldl = function(obj, iterator, memo, opt_context) {};
  * @return {!*}
  */
 _.reduceRight = function(obj, iterator, memo, opt_context) {};
+_.foldr = _.reduceRight;
 
 /**
+ * Functional-style notation
  * @param {Object|Array} obj
  * @param {Function} iterator
  * @param {*} memo
  * @param {Object=} opt_context
  * @return {!*}
  */
-_.foldr = function(obj, iterator, memo, opt_context) {};
+_.prototype.reduceRight = function(iterator, memo, opt_context) {};
+_.prototype.foldr = _.prototype.reduceRight;
 
 /**
  * @param {Object|Array} obj
