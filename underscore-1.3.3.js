@@ -26,7 +26,7 @@
  */
 
 /**
- * @param {Object} obj
+ * @param {Object|number} obj
  * @return {!_}
  * @constructor
  */
