@@ -209,7 +209,7 @@ _.prototype.every = _.prototype.all;
  * @param {Object|Array} obj
  * @param {Function} iterator
  * @param {Object=} opt_context
- * @return {boolean}
+ * @return {boolean|_}
  */
 _.any = function(obj, iterator, opt_context) {};
 _.some = _.any;
@@ -218,7 +218,7 @@ _.some = _.any;
  * Functional-style notation
  * @param {Function} iterator
  * @param {Object=} opt_context
- * @return {boolean}
+ * @return {boolean|_}
  */
 _.prototype.any = function(iterator, opt_context) {};
 _.prototype.some = _.prototype.any;
@@ -489,14 +489,14 @@ _.prototype.flatten = function(opt_shallow) {};
  * Object-style notation
  * @param {Array} array
  * @param {...*} var_args
- * @return {!Array}
+ * @return {!Array|_}
  */
 _.without = function(array, var_args) {};
 
 /**
  * Functional-style notation
  * @param {...*} var_args
- * @return {!Array}
+ * @return {!Array|_}
  */
 _.prototype.without = function(var_args) {};
 
