@@ -1190,3 +1190,32 @@ _.template = function(str, opt_data) {};
  * @param {Object=} opt_data
  */
 _.prototype.template = function(opt_data) {};
+
+/**
+ * Object-style notation
+ * @param {Object} obj
+ * @return {_}
+ */
+_.chain = function(obj) {};
+
+/**
+ * Functional-style notation
+ * @return {_}
+ */
+_.prototype.chain = function() {};
+
+/**
+ * Object-style notation
+ * @param {Object} obj
+ * @return {*}
+ */
+_.value = function(obj) {};
+
+/**
+ * Functioanl-style notation
+ * @return {*}
+ */
+_.prototype.value = function() {};
+
+
+
