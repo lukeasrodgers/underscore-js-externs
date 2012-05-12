@@ -120,7 +120,6 @@ _.foldr = _.reduceRight;
 
 /**
  * Functional-style notation
- * @param {Object|Array} obj
  * @param {Function} iterator
  * @param {*} memo
  * @param {Object=} opt_context
