@@ -531,17 +531,17 @@ _.prototype.intersect = _.intersection;
 /**
  * Object-style notation
  * @param {Array} array
- * @param {...Array} arrays
+ * @param {...*} others
  * @return {!Array}
  */
-_.difference = function(array, arrays) {};
+_.difference = function(array, others) {};
 
 /**
  * Functional-style notation
- * @param {...Array} arrays
+ * @param {...*} others
  * @return {!Array}
  */
-_.prototype.difference = function(arrays) {};
+_.prototype.difference = function(others) {};
 
 /**
  * Object-style notation
