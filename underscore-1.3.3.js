@@ -523,9 +523,10 @@ _.intersect = _.intersection;
 
 /**
  * Functional-style notation
+ * @param {...Array} arrays
  * @return {!Array}
  */
-_.prototype.intersection = function() {};
+_.prototype.intersection = function(arrays) {};
 _.prototype.intersect = _.intersection;
 
 /**
