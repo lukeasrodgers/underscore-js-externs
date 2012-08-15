@@ -381,13 +381,13 @@ _.prototype.toArray = function() {};
 /**
  * Object-style notation
  * @param {Object|Array} obj
- * @return {!Array}
+ * @return {number}
  */
 _.size = function(obj) {};
 
 /**
  * Functional-style notation
- * @return {!Array}
+ * @return {number}
  */
 _.prototype.size = function() {};
 
