@@ -56,7 +56,7 @@ _.prototype.forEach = _.prototype.each;
  * @param {Object|Array} obj
  * @param {Function} iterator
  * @param {Object=} opt_context
- * @return {!Array}
+ * @return {!Array|_}
  */
 _.map = function(obj, iterator, opt_context) {};
 
@@ -64,7 +64,7 @@ _.map = function(obj, iterator, opt_context) {};
  * Functional-style annotation
  * @param {Function} iterator
  * @param {Object=} opt_context
- * @return {!Array}
+ * @return {!Array|_}
  */
 _.prototype.map = function(iterator, opt_context){};
 
@@ -112,7 +112,7 @@ _.inject = _.prototype.reduce;
  * Object-style notation
  * @param {Object|Array} obj
  * @param {Function} iterator
- * @param {*} memo
+ * @param {*=} memo
  * @param {Object=} opt_context
  * @return {!*}
  */
@@ -122,7 +122,7 @@ _.foldr = _.reduceRight;
 /**
  * Functional-style notation
  * @param {Function} iterator
- * @param {*} memo
+ * @param {*=} memo
  * @param {Object=} opt_context
  * @return {!*}
  */
@@ -134,7 +134,7 @@ _.prototype.foldr = _.prototype.reduceRight;
  * @param {Object|Array} obj
  * @param {Function} iterator
  * @param {Object=} opt_context
- * @return {!*}
+ * @return {!*|_}
  */
 _.find = function(obj, iterator, opt_context) {};
 _.detect = _.find;
@@ -143,7 +143,7 @@ _.detect = _.find;
  * Functional-style notation
  * @param {Function} iterator
  * @param {Object=} opt_context
- * @return {!*}
+ * @return {!*|_}
  */
 _.prototype.find = function(iterator, opt_context) {};
 _.prototype.detect = _.prototype.find;
@@ -154,7 +154,7 @@ _.prototype.detect = _.prototype.find;
  * @param {Object|Array} obj
  * @param {Function} iterator
  * @param {Object=} opt_context
- * @return {!Array}
+ * @return {!Array|_}
  */
 _.filter = function(obj, iterator, opt_context) {};
 _.select = _.filter;
@@ -163,7 +163,7 @@ _.select = _.filter;
  * Functional-style notation
  * @param {Function} iterator
  * @param {Object=} opt_context
- * @return {!Array}
+ * @return {!Array|_}
  */
 _.prototype.filter = function(iterator, opt_context) {};
 _.prototype.select = _.prototype.filter;
@@ -173,7 +173,7 @@ _.prototype.select = _.prototype.filter;
  * @param {Object|Array} obj
  * @param {Function} iterator
  * @param {Object=} opt_context
- * @return {!Array}
+ * @return {!Array|_}
  */
 _.reject = function(obj, iterator, opt_context) {};
 
@@ -181,7 +181,7 @@ _.reject = function(obj, iterator, opt_context) {};
  * Functional-style notation
  * @param {Function} iterator
  * @param {Object=} opt_context
- * @return {!Array}
+ * @return {!Array|_}
  */
 _.prototype.reject = function(iterator, opt_context) {};
 
@@ -308,7 +308,7 @@ _.prototype.min = function(opt_iterator, opt_context) {};
  * @param {Object|Array} obj
  * @param {Function} iterator
  * @param {Object=} opt_context
- * @return {!Array}
+ * @return {!Array|_}
  */
 _.sortBy = function(obj, iterator, opt_context) {};
 
@@ -316,7 +316,7 @@ _.sortBy = function(obj, iterator, opt_context) {};
  * Functional-style notation
  * @param {Function} iterator
  * @param {Object=} opt_context
- * @return {!Array}
+ * @return {!Array|_}
  */
 _.prototype.sortBy = function(iterator, opt_context) {};
 
@@ -401,6 +401,7 @@ _.prototype.size = function() {};
  */
 _.first = function(array, opt_n) {};
 _.head = _.first;
+_.take = _.first;
 
 /**
  * Functional-style notation
@@ -409,6 +410,7 @@ _.head = _.first;
  */
 _.prototype.first = function(opt_n) {};
 _.prototype.head = _.prototype.first;
+_.prototype.take = _.prototype.first;
 
 /**
  * Object-style notation
@@ -429,14 +431,14 @@ _.prototype.initial = function(opt_n) {};
  * Object-style notation
  * @param {Array} array
  * @param {number=} opt_n
- * @return {!Array}
+ * @return {*}
  */
 _.last = function(array, opt_n) {};
 
 /**
  * Functional-style notation
  * @param {number=} opt_n
- * @return {!Array}
+ * @return {*}
  */
 _.prototype.last = function(opt_n) {};
 
@@ -472,7 +474,7 @@ _.prototype.compact = function() {};
 
 /**
  * Object-style notation
- * @param {Array} array
+ * @param {Array|Arguments} array
  * @param {boolean=} opt_shallow
  * @return {!Array}
  */
@@ -639,6 +641,21 @@ _.bindAll = function(obj, methodNames) {};
  * @param {...string} methodNames
  */
 _.prototype.bindAll = function(methodNames) {};
+
+/**
+ * Object-style notation
+ * @param {Function} func
+ * @param {*} context
+ * @param {...*} args
+ */
+_.bind = function(func, context, args) {};
+
+/**
+ * Functional-style notation
+ * @param {*} context
+ * @param {...*} args
+ */
+_.prototype.bind = function(context, args) {};
 
 /**
  * Object-style notation
@@ -831,13 +848,13 @@ _.prototype.extend = function(objs) {};
 /**
  * Object-style notation
  * @param {Object} obj
- * @param {(Array.<string>|string)=} keys
+ * @param {...*} keys
  */
 _.pick = function(obj, keys) {};
 
 /**
  * Functinoal-style notation
- * @param {(Array.<string>|string)=} keys
+ * @param {...*} keys
  */
 _.prototype.pick = function(keys) {};
 
@@ -869,7 +886,7 @@ _.prototype.clone = function() {};
 
 /**
  * Object-style notation
- * @param {Object} obj
+ * @param {*} obj
  * @param {Function} interceptor
  * @return {Object} obj
  */
@@ -899,15 +916,15 @@ _.prototype.has = function(key) {};
 
 /**
  * Object-style notation
- * @param {Object} a
- * @param {Object} b
+ * @param {*} a
+ * @param {*} b
  * @return {boolean}
  */
 _.isEqual = function(a, b) {};
 
 /**
  * Functional-style notation
- * @param {Object} b
+ * @param {*} b
  * @return {boolean}
  */
 _.prototype.isEqual = function(b) {};
@@ -1090,9 +1107,10 @@ _.isUndefined = function(obj) {};
 
 /**
  * Functional-style notation
+ * @param {*=} obj
  * @return {boolean}
  */
-_.prototype.isUndefined = function() {};
+_.prototype.isUndefined = function(obj) {};
 
 // Utility functions
 
@@ -1181,16 +1199,18 @@ _.prototype.result = function(property) {};
 
 /**
  * Object-style notation
- * @param {string} str
+ * @param {string} text
  * @param {Object=} opt_data
+ * @param {Object=} settings
  */
-_.template = function(str, opt_data) {};
+_.template = function(text, opt_data, settings) {};
 
 /**
  * Functional-style notation
  * @param {Object=} opt_data
+ * @param {Object=} settings
  */
-_.prototype.template = function(opt_data) {};
+_.prototype.template = function(opt_data, settings) {};
 
 /**
  * Object-style notation
@@ -1218,5 +1238,15 @@ _.value = function(obj) {};
  */
 _.prototype.value = function() {};
 
+/**
+ * Object-style notation
+ * @param {*} obj
+ * @return {boolean}
+ */
+_.isFinite = function(obj) {};
 
-
+/**
+ * Functioanl-style notation
+ * @return {boolean}
+ */
+_.prototype.isFinite = function() {};
