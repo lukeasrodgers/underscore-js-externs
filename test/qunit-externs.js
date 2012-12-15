@@ -1,0 +1,60 @@
+/**
+ * @param {string} name
+ * @param {Object=} lifecycle
+ */
+function module(name, lifecycle) {}
+
+/**
+ * @param {string} title
+ * @param {Number|Function} expected
+ * @param {Function=} test_func
+ */
+function test(title, expected, test_func){}
+
+/**
+ * @param {*} state
+ * @param {string=} message
+ */
+function ok(state, message){}
+
+/**
+ * @param {*} actual
+ * @param {*} expected
+ * @param {string=} message
+ */
+function equal(actual, expected, message){}
+
+/**
+ * @param {*} actual
+ * @param {*} expected
+ * @param {string=} message
+ */
+function notEqual(actual, expected, message){}
+
+/**
+ * @param {*} actual
+ * @param {*} expected
+ * @param {string=} message
+ */
+function deepEqual(actual, expected, message){}
+
+/**
+ * @param {*} actual
+ * @param {*} expected
+ * @param {string=} message
+ */
+function notDeepEqual(actual, expected, message){}
+
+/**
+ * @param {*} actual
+ * @param {*} expected
+ * @param {string=} message
+ */
+function strictEqual(actual, expected, message){}
+
+/**
+ * @param {*} actual
+ * @param {*} expected
+ * @param {string=} message
+ */
+function notStrictEqual(actual, expected, message){}
