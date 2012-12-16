@@ -21,7 +21,7 @@ function asyncTest(name, expected, test_func){}
 /**
  * @param {number} amount
  */
-function expect(number){}
+function expect(amount){}
 
 /**
  * @param {*} state
