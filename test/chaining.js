@@ -1,6 +1,6 @@
   module("Chaining");
 
-  test("chaining: map/flatten/reduce", function() {
+  test("map/flatten/reduce", function() {
     var lyrics = [
       "I'm a lumberjack and I'm okay",
       "I sleep all night and I work all day",
@@ -18,7 +18,7 @@
     ok(counts['a'] == 16 && counts['e'] == 10, 'counted all the letters in the song');
   });
 
-  test("chaining: select/reject/sortBy", function() {
+  test("select/reject/sortBy", function() {
     var numbers = [1,2,3,4,5,6,7,8,9,10];
     numbers = _(numbers).chain().select(function(n) {
       return n % 2 == 0;
@@ -30,7 +30,7 @@
     equal(numbers.join(', '), "10, 6, 2", "filtered and reversed the numbers");
   });
 
-  test("chaining: select/reject/sortBy in functional style", function() {
+  test("select/reject/sortBy in functional style", function() {
     var numbers = [1,2,3,4,5,6,7,8,9,10];
     numbers = _.chain(numbers).select(function(n) {
       return n % 2 == 0;
@@ -42,7 +42,7 @@
     equal(numbers.join(', '), "10, 6, 2", "filtered and reversed the numbers");
   });
 
-  test("chaining: reverse/concat/unshift/pop/map", function() {
+  test("reverse/concat/unshift/pop/map", function() {
     var numbers = [1,2,3,4,5];
     numbers = _(numbers).chain()
       .reverse()
