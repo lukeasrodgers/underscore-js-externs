@@ -32,4 +32,4 @@ related to missing jQuery externs, etc.
 
 I've begun creating tags for the appropriate version of underscore.
 
-Currently only 1.3.3 is tagged. Working on latest (1.4.3)
+Currently only 1.3.3 and 1.4.3 are tagged.
