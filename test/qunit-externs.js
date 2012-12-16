@@ -12,6 +12,18 @@ function module(name, lifecycle) {}
 function test(title, expected, test_func){}
 
 /**
+ * @param {string} name
+ * @param {Number|Function} expected
+ * @param {Function=} test_func
+ */
+function asyncTest(name, expected, test_func){}
+
+/**
+ * @param {number} amount
+ */
+function expect(number){}
+
+/**
  * @param {*} state
  * @param {string=} message
  */
@@ -58,3 +70,13 @@ function strictEqual(actual, expected, message){}
  * @param {string=} message
  */
 function notStrictEqual(actual, expected, message){}
+
+/**
+ * @param {number=} increment
+ */
+function start(increment){}
+
+/**
+ * @param {number=} increment
+ */
+function stop(increment){}
