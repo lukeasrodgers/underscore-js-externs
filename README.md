@@ -1,8 +1,13 @@
 underscore-js-externs
 =====================
 
-This file provides externs for the Underscore js library, version 1.3.3,
-for use with Google's Closure Compiler.
+This file provides externs for the Underscore js library for use with
+Google's Closure Compiler.
+
+Extern files currently exist for the following versions: 
+
+- 1.3.3
+- 1.4.3
 
 It covers both object-style notation (\_.detect(array, function())), as
 well as functional style (\_(array).detect(function() {})).
