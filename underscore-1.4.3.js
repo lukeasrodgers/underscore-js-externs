@@ -337,48 +337,54 @@ _.prototype.sortBy = function(iterator, opt_context) {};
  * Object-style notation
  * @param {Object|Array} obj
  * @param {string|Function} iterator
+ * @param {*=} context
  * @return {!Array.<!Array>|_}
  */
-_.groupBy = function(obj, iterator) {};
+_.groupBy = function(obj, iterator, context) {};
 
 /**
  * Functional-style notation
  * @param {string|Function} iterator
+ * @param {*=} context
  * @return {!Array.<!Array>|_}
  */
-_.prototype.groupBy = function(iterator) {};
+_.prototype.groupBy = function(iterator, context) {};
 
 /**
  * Object-style notation
  * @param {Object|Array} obj
  * @param {string|Function} iterator
+ * @param {*=} context
  * @return {!Array.<!Array>|_}
  */
-_.countBy = function(obj, iterator) {};
+_.countBy = function(obj, iterator, context) {};
 
 /**
  * Functional-style notation
  * @param {string|Function} iterator
+ * @param {*=} context
  * @return {!Array.<!Array>|_}
  */
-_.prototype.countBy = function(iterator) {};
+_.prototype.countBy = function(iterator, context) {};
 
 /**
  * Object-style notation
  * @param {Array} list
  * @param {*} obj
  * @param {Function} opt_iterator
+ * @param {*=} context
  * @return {!number}
  */
-_.sortedIndex = function(list, obj, opt_iterator) {};
+_.sortedIndex = function(list, obj, opt_iterator, context) {};
 
 /**
  * Functional-style notation
  * @param {*} obj
  * @param {Function} opt_iterator
+ * @param {*=} context
  * @return {!number}
  */
-_.prototype.sortedIndex = function(obj, opt_iterator) {};
+_.prototype.sortedIndex = function(obj, opt_iterator, context) {};
 
 /**
  * Object-style notation
