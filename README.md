@@ -1,5 +1,4 @@
-underscore-js-externs
-=====================
+# underscore-js-externs
 
 This file provides externs for the Underscore js library for use with
 Google's Closure Compiler.
@@ -8,6 +7,7 @@ Extern files currently exist for the following versions:
 
 - 1.3.3
 - 1.4.3
+- 1.4.4
 
 It covers both object-style notation (\_.detect(array, function())), as
 well as functional style (\_(array).detect(function() {})).
@@ -28,13 +28,8 @@ You can do this for yourself thus.
 - install closure compiler
 - make sure ruby is installed
 - `export CC_PATH={path/to/compiler.jar}`
-- from this directory: `cd test && ruby compile_javascript.rb`
+- from this directory, `cd` to the appropriate test directory
+- `ruby compile_javascript.rb`
 
 This will spit out a bunch of errors. Most of them are irrelevant,
 related to missing jQuery externs, etc.
-
-## Tags
-
-I've begun creating tags for the appropriate version of underscore.
-
-Currently only 1.3.3 and 1.4.3 are tagged.
