@@ -173,13 +173,13 @@ _.prototype.select = _.prototype.filter;
  * @param {*} list
  * @param {Object} properties
  */
-_.where = function(list, properites) {};
+_.where = function(list, properties) {};
 
 /**
  * Functional-style notation
  * @param {Object} properties
  */
-_.prototype.where = function(list, properites) {};
+_.prototype.where = function(properties) {};
 
 /**
  * Object-style notation
