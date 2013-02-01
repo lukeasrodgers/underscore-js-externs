@@ -429,7 +429,7 @@ _.prototype.size = function() {};
 
 /**
  * Object-style notation
- * @param {Array} array
+ * @param {Array|Arguments} array
  * @param {number=} opt_n
  * @return {!*}
  */
@@ -496,7 +496,7 @@ _.prototype.tail = _.prototype.rest;
 
 /**
  * Object-style notation
- * @param {Array} array
+ * @param {Array|Arguments} array
  * @return {!Array}
  */
 _.compact = function(array) {};
@@ -524,7 +524,7 @@ _.prototype.flatten = function(opt_shallow) {};
 
 /**
  * Object-style notation
- * @param {Array} array
+ * @param {Array|Arguments} array
  * @param {...*} var_args
  * @return {!Array|_}
  */
@@ -552,7 +552,7 @@ _.prototype.union = function() {};
 
 /**
  * Object-style notation
- * @param {...Array} arrays
+ * @param {...Array|Arguments} arrays
  * @return {!Array}
  */
 _.intersection = function(arrays) {};
@@ -583,7 +583,7 @@ _.prototype.difference = function(others) {};
 
 /**
  * Object-style notation
- * @param {Array} array
+ * @param {Array|Arguments} array
  * @param {boolean=} opt_isSorted
  * @param {Function=} opt_iterator
  * @return {!Array}
@@ -615,7 +615,7 @@ _.prototype.zip = function() {};
 
 /**
  * Object-style notation
- * @param {Array} array
+ * @param {Array|Arguments} array
  * @param {*} item
  * @param {boolean=} opt_isSorted
  * @return {!number}
@@ -632,7 +632,7 @@ _.prototype.indexOf = function(item, opt_isSorted) {};
 
 /**
  * Object-style notation
- * @param {Array} array
+ * @param {Array|Arguments} array
  * @param {*} item
  * @return {!number}
  */
