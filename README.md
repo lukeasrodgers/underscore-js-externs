@@ -29,7 +29,7 @@ You can do this for yourself thus.
 - make sure ruby is installed
 - `export CC_PATH={path/to/compiler.jar}`
 - from this directory, `cd` to the appropriate test directory
-- `ruby compile_javascript.rb`
+- `ruby test_externs.rb`
 
 This will spit out a bunch of errors. Most of them are irrelevant,
 related to missing jQuery externs, etc.
