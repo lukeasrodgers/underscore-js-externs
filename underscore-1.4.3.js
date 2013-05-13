@@ -319,7 +319,7 @@ _.prototype.min = function(opt_iterator, opt_context) {};
 /**
  * Object-style notation
  * @param {Object|Array} obj
- * @param {Function} iterator
+ * @param {Function|string} iterator
  * @param {Object=} opt_context
  * @return {!Array|_}
  */
@@ -327,7 +327,7 @@ _.sortBy = function(obj, iterator, opt_context) {};
 
 /**
  * Functional-style notation
- * @param {Function} iterator
+ * @param {Function|string} iterator
  * @param {Object=} opt_context
  * @return {!Array|_}
  */
