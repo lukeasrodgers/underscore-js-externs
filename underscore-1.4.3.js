@@ -220,7 +220,7 @@ _.prototype.every = _.prototype.all;
 /**
  * Object-style notation
  * @param {Object|Array} obj
- * @param {Function} iterator
+ * @param {Function=} iterator
  * @param {Object=} opt_context
  * @return {boolean|_}
  */
@@ -229,7 +229,7 @@ _.some = _.any;
 
 /**
  * Functional-style notation
- * @param {Function} iterator
+ * @param {Function=} iterator
  * @param {Object=} opt_context
  * @return {boolean|_}
  */
