@@ -616,6 +616,21 @@ _.prototype.zip = function() {};
 
 /**
  * Object-style notation
+ * @param {Array} list
+ * @param {Array=} values
+ * @return {Object}
+ */
+_.object = function(list, values) {};
+
+/**
+ * Functional-style notation
+ * @param {Array=} values
+ * @return {Object}
+ */
+_.prototype.object = function(values) {};
+
+/**
+ * Object-style notation
  * @param {Array|Arguments} array
  * @param {*} item
  * @param {boolean=} opt_isSorted
