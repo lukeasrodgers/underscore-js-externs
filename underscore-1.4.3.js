@@ -652,16 +652,18 @@ _.prototype.indexOf = function(item, opt_isSorted) {};
  * Object-style notation
  * @param {Array|Arguments} array
  * @param {*} item
+ * @param {number=} fromIndex
  * @return {!number}
  */
-_.lastIndexOf = function(array, item) {};
+_.lastIndexOf = function(array, item, fromIndex) {};
 
 /**
  * Functional-style notation
  * @param {*} item
+ * @param {number=} fromIndex
  * @return {!number}
  */
-_.prototype.lastIndexOf = function(item) {};
+_.prototype.lastIndexOf = function(item, fromIndex) {};
 
 /**
  * Object-style notation
