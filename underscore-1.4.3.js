@@ -585,20 +585,22 @@ _.prototype.difference = function(others) {};
 /**
  * Object-style notation
  * @param {Array|Arguments} array
- * @param {boolean=} opt_isSorted
+ * @param {boolean|Function=} opt_isSorted
  * @param {Function=} opt_iterator
+ * @param {Object=} context
  * @return {!Array}
  */
-_.uniq = function(array, opt_isSorted, opt_iterator) {};
+_.uniq = function(array, opt_isSorted, opt_iterator, context) {};
 _.unique = _.uniq;
 
 /**
  * Functional-style notation
- * @param {boolean=} opt_isSorted
+ * @param {boolean|Function=} opt_isSorted
  * @param {Function=} opt_iterator
+ * @param {Object=} context
  * @return {!Array}
  */
-_.prototype.uniq = function(opt_isSorted, opt_iterator) {};
+_.prototype.uniq = function(opt_isSorted, opt_iterator, context) {};
 _.prototype.unique = _.prototype.uniq;
 
 /**
