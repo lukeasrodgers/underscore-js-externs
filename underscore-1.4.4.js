@@ -506,6 +506,7 @@ _.drop = _.rest;
  */
 _.prototype.rest = function(opt_n) {};
 _.prototype.tail = _.prototype.rest;
+_.prototype.drop = _.prototype.rest;
 
 /**
  * Object-style notation
