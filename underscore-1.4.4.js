@@ -384,7 +384,7 @@ _.prototype.countBy = function(iterator, context) {};
  * Object-style notation
  * @param {Array} list
  * @param {*} obj
- * @param {Function} opt_iterator
+ * @param {Function=} opt_iterator
  * @param {*=} context
  * @return {!number}
  */
@@ -393,7 +393,7 @@ _.sortedIndex = function(list, obj, opt_iterator, context) {};
 /**
  * Functional-style notation
  * @param {*} obj
- * @param {Function} opt_iterator
+ * @param {Function=} opt_iterator
  * @param {*=} context
  * @return {!number}
  */
