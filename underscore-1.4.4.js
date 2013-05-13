@@ -198,7 +198,7 @@ _.prototype.findWhere = function(properties) {};
  * Object-style notation
  * @param {Object|Array} obj
  * @param {Function} iterator
- * @param {Object=} opt_context
+ * @param {*=} opt_context
  * @return {!Array|_}
  */
 _.reject = function(obj, iterator, opt_context) {};
@@ -206,7 +206,7 @@ _.reject = function(obj, iterator, opt_context) {};
 /**
  * Functional-style notation
  * @param {Function} iterator
- * @param {Object=} opt_context
+ * @param {*=} opt_context
  * @return {!Array|_}
  */
 _.prototype.reject = function(iterator, opt_context) {};
