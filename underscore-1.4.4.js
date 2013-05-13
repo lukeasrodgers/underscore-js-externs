@@ -427,7 +427,7 @@ _.prototype.toArray = function() {};
 
 /**
  * Object-style notation
- * @param {Object|Array} obj
+ * @param {Object|Array|string} obj
  * @return {number}
  */
 _.size = function(obj) {};
