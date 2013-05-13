@@ -336,7 +336,7 @@ _.prototype.sortBy = function(iterator, opt_context) {};
 /**
  * Object-style notation
  * @param {Object|Array} obj
- * @param {string|Function} iterator
+ * @param {string|Function=} iterator
  * @param {*=} context
  * @return {!Array.<!Array>|_}
  */
@@ -344,7 +344,7 @@ _.groupBy = function(obj, iterator, context) {};
 
 /**
  * Functional-style notation
- * @param {string|Function} iterator
+ * @param {string|Function=} iterator
  * @param {*=} context
  * @return {!Array.<!Array>|_}
  */
@@ -353,7 +353,7 @@ _.prototype.groupBy = function(iterator, context) {};
 /**
  * Object-style notation
  * @param {Object|Array} obj
- * @param {string|Function} iterator
+ * @param {string|Function=} iterator
  * @param {*=} context
  * @return {!Array.<!Array>|_}
  */
@@ -361,7 +361,7 @@ _.countBy = function(obj, iterator, context) {};
 
 /**
  * Functional-style notation
- * @param {string|Function} iterator
+ * @param {string|Function=} iterator
  * @param {*=} context
  * @return {!Array.<!Array>|_}
  */
