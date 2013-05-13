@@ -269,14 +269,14 @@ _.prototype.contains = _.prototype.include;
 /**
  * Object-style notation
  * @param {Object|Array} obj
- * @param {Function} method
+ * @param {Function|string} method
  * @param {...*} var_args
  */
 _.invoke = function(obj, method, var_args) {};
 
 /**
  * Functional-style notation
- * @param {Function} method
+ * @param {Function|string} method
  * @param {...*} var_args
  */
 _.prototype.invoke = function(method, var_args) {};
