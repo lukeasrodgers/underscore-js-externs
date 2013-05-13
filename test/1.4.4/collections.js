@@ -309,6 +309,9 @@
     var sorted = _.sortBy(list, 'length');
     equal(sorted.join(' '), 'one two four five three', 'sorted by length');
 
+    /**
+     * @constructor
+     */
     function Pair(x, y) {
       this.x = x;
       this.y = y;
