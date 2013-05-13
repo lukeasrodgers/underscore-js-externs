@@ -298,7 +298,7 @@ _.prototype.pluck = function(key) {};
 /**
  * Object-style notation
  * @param {Object|Array} obj
- * @param {Function} opt_iterator
+ * @param {Function=} opt_iterator
  * @param {Object=} opt_context
  * @return {!*}
  */
@@ -306,7 +306,7 @@ _.max = function(obj, opt_iterator, opt_context) {};
 
 /**
  * Functional-style notation
- * @param {Function} opt_iterator
+ * @param {Function=} opt_iterator
  * @param {Object=} opt_context
  * @return {!*}
  */
@@ -315,7 +315,7 @@ _.prototype.max = function(opt_iterator, opt_context) {};
 /**
  * Object-style notation
  * @param {Object|Array} obj
- * @param {Function} opt_iterator
+ * @param {Function=} opt_iterator
  * @param {Object=} opt_context
  * @return {!*}
  */
@@ -323,7 +323,7 @@ _.min = function(obj, opt_iterator, opt_context) {};
 
 /**
  * Functional-style notation
- * @param {Function} opt_iterator
+ * @param {Function=} opt_iterator
  * @param {Object=} opt_context
  * @return {!*}
  */
