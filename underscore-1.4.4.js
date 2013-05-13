@@ -648,7 +648,7 @@ _.prototype.object = function(values) {};
  * Object-style notation
  * @param {Array|Arguments} array
  * @param {*} item
- * @param {boolean=} opt_isSorted
+ * @param {boolean|number=} opt_isSorted
  * @return {!number}
  */
 _.indexOf = function(array, item, opt_isSorted) {};
@@ -656,7 +656,7 @@ _.indexOf = function(array, item, opt_isSorted) {};
 /**
  * Functional-style notation
  * @param {*} item
- * @param {boolean=} opt_isSorted
+ * @param {boolean|number=} opt_isSorted
  * @return {!number}
  */
 _.prototype.indexOf = function(item, opt_isSorted) {};
