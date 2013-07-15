@@ -10,8 +10,8 @@ Extern files currently exist for the following versions:
 - 1.5.0
 - 1.5.1
 
-It covers both object-style notation `(\_.detect(array, function()))`, as
-well as functional style `(\_(array).detect(function() {}))`.
+It covers both object-style notation `(_.detect(array, function()))`, as
+well as functional style `(_(array).detect(function() {}))`.
 
 Bug reports, pull requests are welcome.
 
